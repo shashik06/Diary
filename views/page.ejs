@@ -1,0 +1,22 @@
+<%- include('./layout/Header.ejs')%>
+<div class="container  mt-3 p-5">
+    <div class="card bg-success-subtle text-dark p-5 w-75">
+        <h3><%= data.title%></h3>
+        <p><%= data.description%></p>
+        <p><%= data.date%></p>
+        <a href="/edit/<%= data.id%>" class="btn btn-warning w-25  mt-3">Edit</a>
+        <div class="form mt-2">
+            <form action="/delete/<%=data.id%>?_method=DELETE" method="post">
+                <input type="hidden" name="_method" value="DELETE">
+                <input type="submit" value="Delete" class="
+                btn btn-danger w-25 ">
+            </form>
+        </div>
+    </div>
+    
+    
+</div>
+
+<%- include('./layout/Footer.ejs')%>
+
+

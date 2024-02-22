@@ -1,0 +1,25 @@
+<%- include('./layout/Header.ejs')%>
+<div class="container text-center mt-3 w-50 ">
+    <h3 class="bg-success p-3">Add Diary</h3>
+    <div class="bg-success-subtle mt-2  ">
+        <form action="/add-to-diary" method="post" class="p-5">
+            <div class="mb-5">
+              <label for="exampleInputEmail1" class="form-label">Title</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" name="title">
+            </div>
+            <div class="mb-5">
+              <label for="exampleInputEmail1" class="form-label">Description</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"></textarea>
+            </div>
+            <div class="mb-5">
+              <label for="exampleInputEmail1" class="form-label">Date</label>
+                <input type="date" class="form-control" id="exampleInputPassword1" name="date">
+              </div>
+            
+            <input type="submit" class="btn btn-primary" value="AddtoDiary">
+          </form>
+    </div>
+</div>
+<%- include('./layout/Footer.ejs')%>
+
+
